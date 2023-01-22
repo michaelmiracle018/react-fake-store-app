@@ -1,0 +1,136 @@
+/* main{
+	background-image: url('../assets/images/bg-image.jpg');
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-origin: border-box;
+	height: 35rem;
+} */
+
+nav {
+	background: rgb(189, 185, 115);
+	box-shadow: var(--shadow-1);
+	position: relative;
+	top: 0;
+color: var(--black);
+}
+.nav-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem;
+}
+.nav-toggle {
+	font-size: 1.5rem;
+	color: #fff;
+	background: transparent;
+	border-color: transparent;
+	transition: var(--transition);
+	cursor: pointer;
+}
+.nav-toggle:hover {
+	color: #fff;
+	/* transform: rotate(90deg); */
+}
+.logo {
+	height: 80px;
+}
+.links {
+	display: block;
+}
+.links .link{
+	color: var(--black);
+	font-size: 1.2rem;
+	text-transform: capitalize;
+	letter-spacing: var(--spacing);
+	display: block;
+	padding: 0.5rem 1rem;
+	transition: var(--transition);
+	text-decoration: none;
+	font-weight: 500;
+}
+
+
+.links .link:hover {
+	background: transparent;
+	color: rgb(85, 49, 62);
+	padding-left: 1.5rem;
+}
+.icons {
+	display: none;
+}
+
+.iceCream-sm {
+	display: block;
+}
+
+
+.links-container {
+	height: 0;
+	overflow: hidden;
+	transition: var(--transition);
+}
+.show-container {
+	height: 10rem;
+}
+
+.cart-number {
+  position: relative;
+  top: -40px;
+  right: -30px;
+  color: rgb(10, 12, 12);
+  font-size: 16px;
+}
+
+.header__shrink {
+    position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+}
+
+@media screen and (min-width: 50rem) {
+	.nav-center {
+		max-width: 1170px;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 1rem;
+	}
+	.nav-header {
+		padding: 0;
+	}
+	.nav-toggle {
+		display: none;
+	}
+	.links-container {
+		height: auto !important;
+	}
+	.links {
+		display: flex;
+	}
+	.links .iceCream-icon {
+		padding: 0;
+		margin: 0 0.5rem;
+	}
+	.links .iceCream-icon:hover {
+		padding: 0;
+		background: transparent;
+	}
+	.icons {
+		display: block;
+	}
+	.icons .iceCream-icon {
+		margin: 0 0.5rem;
+		color: #fff;
+		transition: var(--transition);
+	}
+	.icons a:hover {
+		color: var(--clr-primary-7);
+	}
+
+	.iceCream-sm {
+		display: none;
+	}
+}

@@ -1,0 +1,61 @@
+.wrapper {
+	font-family: "mothwing-demo";
+	gap: 2rem;
+}
+
+.left-container {
+	flex: 1;
+}
+
+.left-container h1 {
+	font-size: 2rem;
+	color: var(--black);
+	font-weight: 400;
+}
+
+.left-container .check-out {
+	color: rgb(135, 159, 166);
+	font-size: 1.2rem;
+	font-weight: 500;
+}
+
+.left-container .first-para,
+.second-para {
+	color: var(--black);
+	font-size: 1.2rem;
+	font-weight: 500;
+}
+
+.left-container .more-btn {
+	background: rgb(189, 185, 115);
+	border: none;
+	outline: none;
+	font-size: 1rem;
+	font-weight: 400;
+	width: 120px;
+	height: 50px;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.right-container {
+	flex: 1;
+}
+
+.right-container img {
+	width: 100%;
+	/* min-width: 37.5rem; */
+	
+}
+
+
+@media screen and (min-width: 62.5rem) {
+.wrapper {
+	display: flex;
+}
+
+.right-container img {
+    min-width: 30rem;
+}
+
+}

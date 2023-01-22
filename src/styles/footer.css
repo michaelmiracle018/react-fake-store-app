@@ -1,0 +1,247 @@
+.main_container {
+	font-family: "mothwing-demo";
+    background: var(--footer-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ 
+
+
+@media screen and (max-width: 48.5rem) {
+	.contact_footer,
+	.about_section {
+		margin-left: 1rem;
+	}
+}
+
+.underline {
+	width: 3.6rem;
+	background: var(--footer-icon-color);
+	height: 2px;
+	margin-bottom: 2rem;
+	margin-top: 0.8rem;
+}
+
+/* ==== Contact section Styles ==== */
+
+.location_content,
+.call_content,
+.mail_content {
+	display: flex;
+	text-align: center;
+}
+
+.location_icon,
+.call_icon,
+.mail_icon {
+	font-size: 30px;
+	float: left;
+	color: var(--footer-icon-color);
+	margin-right: 0.4125rem;
+}
+
+.text h2 {
+	color: var(--white);
+	font-size: 1.25rem;
+	font-weight: 600;
+}
+
+.text p {
+	font-size: 0.9375rem;
+	color: var(--grey);
+	font-weight: 400;
+}
+
+@media screen and (min-width: 50rem) {
+}
+
+/* ==== End Of Contact Section Styles ==== */
+
+/* ==== About Section Styles ==== */
+
+/* Logo Content */
+
+.logo_content img {
+	max-width: 12.5rem;
+}
+
+.logo_content p {
+	margin-bottom: 0.875rem;
+	margin-top: 1.8rem;
+	font-size: 0.875rem;
+	color: var(--grey);
+	line-height: 1.75rem;
+	max-width: 25rem;
+}
+
+.follow_us h2 {
+	color: var(--white);
+	display: block;
+	font-size: 1.25rem;
+	font-weight: 700;
+	margin-bottom: 1.25rem;
+}
+
+.follow_us_icons {
+	display: flex;
+	gap: 1.3rem;
+}
+
+.follow_us_icons a {
+	height: 2.5rem;
+	width: 2.5rem;
+	text-align: center;
+	line-height: 2.375rem;
+	border-radius: 50%;
+	color: var(--white);
+}
+
+.follow_us_icons a:hover {
+	color: var(--white);
+}
+
+.follow_us_icons a:nth-child(1) {
+	background: #3b5998;
+}
+.follow_us_icons a:nth-child(2) {
+	background: #55acee;
+}
+.follow_us_icons a:nth-child(3) {
+	background: #dd4b39;
+}
+
+/* Links Content */
+.links_content {
+	max-width: 15rem;
+}
+
+.links_content h2 {
+	color: var(--white);
+	font-size: 1.25rem;
+	font-weight: 600;
+}
+.links {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	margin-left: -1.9rem;
+}
+
+.link1 a,
+.link2 a {
+	color: var(--grey);
+	text-decoration: none;
+	color: #878787;
+	text-transform: capitalize;
+}
+
+.link1 a:hover,
+.link2 a:hover {
+	color: var(--footer-icon-color);
+	text-decoration: underline;
+}
+
+.subscribe_content {
+	margin-top: 2rem;
+}
+
+.subscribe_content h2 {
+	color: var(--white);
+	font-size: 1.25rem;
+	font-weight: 600;
+}
+
+.subscribe_content p {
+	color: var(--grey);
+	max-width: 29rem;
+}
+
+.input_wrap input {
+	width: 100%;
+	max-width: 14rem;
+	padding: 0.6rem;
+	background: #2e2e2e;
+	border: none;
+	color: var(--white);
+	outline: none;
+}
+
+.input_wrap button {
+	width: 2.4rem;
+	padding: 0.55rem;
+	background: var(--footer-icon-color);
+	border: none;
+	outline: none;
+	color: var(--white);
+	font-size: 1rem;
+}
+
+/* .input_wrap button { */
+/* ==== End Of About Section Styles ==== */
+
+/* ====  Copyright Section Styles ==== */
+.copyright_section {
+	margin-top: 1.5rem;
+	/* background: #202020; */
+    padding-left: 1rem;
+    height: 5rem;
+}
+.copyright_section p {
+	color: var(--grey);
+	font-size: 0.8rem;
+}
+
+.copyright_section p span {
+	color: var(--footer-icon-color);
+}
+
+.copyright_section ul {
+	display: flex;
+	gap: 0.5rem;
+    margin-left: -2rem;
+}
+
+.copyright_section ul li a {
+	color: var(--grey);
+	text-decoration: none;
+	color: #878787;
+	text-transform: capitalize;
+	font-size: 0.7rem;
+}
+
+.copyright_section ul li a:hover {
+	color: var(--footer-icon-color);
+	text-decoration: underline;
+}
+
+/* ==== End Of Copyright Section Styles ==== */
+
+@media screen and (min-width: 53.125rem) {
+	.copyright_section {
+		display: flex;
+        justify-content: space-between;
+        align-items: center;
+	}
+
+.copyright_section ul {
+    margin-left: 0;
+    margin-top: -.3rem;
+}
+
+	.logo_content {
+		margin-right: 1rem;
+	}
+	.about_section {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.contact_footer {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+	.line {
+		border: 1px solid var(--grey);
+	}
+}

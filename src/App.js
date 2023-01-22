@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Layout from "./components/Layout/Layout";
+import { useEffect } from "react";
+import { calculateTotals } from "./features/products/productSlice";
+import { useDispatch, useSelector } from "react-redux";
+import Modal from "./components/UI/Modal";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+	const { cartBag } = useSelector((store) => store.products);
+	const { isOpen } = useSelector((store) => store.modal);
+
+	const dispatch = useDispatch();
+
+	useEffect(() => {
+		dispatch(calculateTotals());
+	}, [cartBag]);
+
+	return (
+		<>
+			<div>
+				{isOpen && <Modal />}
+
+				<Layout />
+			</div>
+			<ToastContainer />
+		</>
+	);
+};
 
 export default App;

@@ -1,0 +1,15 @@
+.category_container {
+	font-family: "mothwing-demo";
+}
+
+.category_btn button {
+    color: #fff;
+    width: 100%;
+    max-width: 140px;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+    text-transform: capitalize;
+
+}

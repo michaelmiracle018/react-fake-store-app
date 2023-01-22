@@ -1,0 +1,22 @@
+							<FaBars onClick={() => setShowLinks(!showLinks)} />
+
+							<Hamburger onClick={() => setShowLinks(!showLinks)} />
+		<img src={image} alt="image" className="bg-image" />
+
+
+
+{/* useEffect(() => {
+			window.addEventListener("scroll", () => {
+				if (
+					document.body.scrollTop > 50 ||
+					document.documentElement.scrollTop > 50
+				) {
+					linksNav.current.classList.add("header__shrink");
+				} else {
+					linksNav.current.classList.remove("header__shrink");
+				}
+			});
+
+			return () => window.removeEventListener("scroll", null);
+		}, []);*/}
+
