@@ -26,5 +26,3 @@ npm install hamburger-react
 ## React Toastify
 npm install --save react-toastify
 
-
-src="https://i.ibb.co/QDy827D/ak-logo.png"
