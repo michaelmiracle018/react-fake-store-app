@@ -17,10 +17,9 @@ const Products = ({ product }) => {
 
 
 
-	const handleAddToCart = (id) => {
+	const handleAddToCart = () => {
 		dispatch(
 			addToCart(product),
-			// toast("Item Added To Cart",)
 		);
 	};
 

@@ -7,6 +7,7 @@ import Contact from "../pages/Contact";
 import About from "../pages/About";
 import SingleProduct from "../pages/SingleProduct";
 import Order from "../pages/Order";
+// import Register from "../pages/Register";
 
 
 
@@ -25,7 +26,7 @@ const Routers = () => {
 				<Route path="/home/:id" element={<SingleProduct />} />
 				<Route path="/order" element={<Order />} />
 				{/* 
-    <Route path="/register" element={<Register />} />
+				<Route path="/register" element={<Register />} />
   <Route path="/contact" element={<Contact />} /> */}
 			</Routes>
 		</Router>

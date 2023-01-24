@@ -1,6 +1,5 @@
 import React from "react";
 import "../../styles/cart.css";
-import EG from "../../assets/images/bg-image.jpg";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import {
 	increaseCart,
@@ -8,7 +7,6 @@ import {
 	removeItem,
 } from "../../features/products/productSlice";
 import { useDispatch } from "react-redux";
-import { ToastContainer, toast } from "react-toastify";
 
 const CartItem = ({ image, id, price, title, quantity }) => {
 	const dispatch = useDispatch();

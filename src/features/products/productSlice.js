@@ -31,7 +31,6 @@ export const fetchProducts = createAsyncThunk(
 	async (name, thunkAPI) => {
 		try {
 			const response = await axios.get(PRODUCT_URL);
-			// console.log(response.data);
 			return response.data;
 		} catch (error) {
 			console.log(error);
@@ -57,7 +56,6 @@ export const fetchSingleProduct = createAsyncThunk(
 	async (productId) => {
 		try {
 			const response = await axios.get(`${PRODUCT_URL}/${productId}`);
-			// console.log(response.data);
 			return response.data;
 		} catch (error) {
 			console.log(error.message);
@@ -71,7 +69,6 @@ export const fetchSpecificCategory = createAsyncThunk(
 	async (category) => {
 		try {
 			const response = await axios.get(`${PRODUCT_URL}/category/${category}`);
-			// console.log(response.data);
 			return response.data;
 		} catch (error) {
 			console.log(error.message);
@@ -83,10 +80,8 @@ export const fetchSpecificCategory = createAsyncThunk(
 export const fetchLimit = createAsyncThunk(
 	"limit/fetchLimit",
 	async (limit) => {
-		console.log(limit);
 		try {
 			const response = await axios.get(`${PRODUCT_URL}?limit=${limit}`);
-			console.log(response);
 			return response.data;
 		} catch (error) {
 			console.log(error.message);
@@ -261,7 +256,6 @@ const productSlice = createSlice({
 			.addCase(fetchLimit.fulfilled, (state, action) => {
 				state.isLoading = false;
 				state.products = action.payload;
-				// console.log(state.singleProduct);
 			})
 			.addCase(fetchLimit.rejected, (state, ) => {
 				state.isLoading = false;

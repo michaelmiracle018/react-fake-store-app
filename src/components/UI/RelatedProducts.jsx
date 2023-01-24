@@ -6,10 +6,9 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchSpecificCategory, } from "../../features/products/productSlice";
 import { useEffect } from 'react';
 
-// onClick={() => handleAddToCart(id)}
+
 const RelatedProducts = ({ specificCategory, addToCart }) => {
     const { id, image, title, price, category } = specificCategory;
-    // console.log(category);
 
 	const dispatch = useDispatch();
 

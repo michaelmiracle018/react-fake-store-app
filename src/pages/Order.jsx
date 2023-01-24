@@ -26,7 +26,7 @@ const Order = () => {
 						<section className="btn_container">
 							<div className="left_btn_content">
 								<button>
-									<span>Order /</span> Product
+									<span>Order /</span> Products
 								</button>
 							</div>
 						</section>
@@ -42,13 +42,14 @@ const Order = () => {
 												<th>Product Image</th>
 												<th>Title</th>
 												<th>Unit Price</th>
-												{/*<th>In-Stock</th>*/}
+												<th>In-Stock</th>
 												<th>Quantity</th>
 												<th>Total Price</th>
 											</tr>
 										</thead>
 										{cartBag.map((cart) => {
-											const { id, image, title, price, quantity } = cart;
+											const { id, image, title, price, quantity, rating } =
+												cart;
 
 											return (
 												<tbody key={cart.id}>
@@ -58,9 +59,9 @@ const Order = () => {
 														</td>
 														<td data-label="Title">{title.substring(0, 15)}</td>
 														<td data-label="Unit Price">$ {price}</td>
-														{/*<td data-label="In-Stock">
-															{cart.rating.count - cart.quantity}
-											</td>*/}
+														<td data-label="In-Stock">
+															{rating.count - cart.quantity}
+														</td>
 														<td data-label="Quantity">{quantity}</td>
 														<td data-label="Total Price">
 															$ {price * quantity}

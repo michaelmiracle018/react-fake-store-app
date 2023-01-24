@@ -16,7 +16,6 @@ const Nav = () => {
 	const linksRef = useRef(null);
 	const linksNav = useRef(null);
 
-
 	useEffect(() => {
 		const linksHeight = linksRef.current.getBoundingClientRect().height;
 		if (showLinks) {
@@ -26,7 +25,21 @@ const Nav = () => {
 		}
 	});
 
-	
+	useEffect(() => {
+		window.addEventListener("scroll", () => {
+			if (
+				document.body.scrollTop > 50 ||
+				document.documentElement.scrollTop > 50
+			) {
+				linksNav.current.classList.add("header__shrink");
+			} else {
+				linksNav.current.classList.remove("header__shrink");
+			}
+		});
+
+		return () => window.removeEventListener("scroll", null);
+	}, []);
+
 	return (
 		<>
 			<main ref={linksNav}>
@@ -64,15 +77,12 @@ const Nav = () => {
 										Cart
 									</Link>
 								</li>
+							
 								<li>
 									{/*<Link to="/about">About</Link>*/}
 									<div className="mode-wrap">
 										<label htmlFor="checkbox" className="switch-toggle switch">
-											<input
-												type="checkbox"
-												id="checkbox"
-												
-											/>
+											<input type="checkbox" id="checkbox" />
 											<div className="slider round"></div>
 										</label>
 									</div>
