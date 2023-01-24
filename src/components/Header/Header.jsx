@@ -1,14 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
-import { FaIceCream, FaBars, FaTimes } from "react-icons/fa";
+import {  FaBars, FaTimes } from "react-icons/fa";
 
 import logoNav from "../../assets/images/logo-design.png";
 import { Link } from "react-router-dom";
-import { Squash as Hamburger } from "hamburger-react";
 import "../../styles/header.css";
-// import { useGlobalContext } from "../../context";
-
-import image from "../../assets/images/bg-image.jpg";
-// const { toggleTheme, theme } = useGlobalContext();
 
 const Nav = () => {
 	const [showLinks, setShowLinks] = useState(false);

@@ -156,7 +156,7 @@ main {
 	.product_input {
 		display: block;
 		display: flex;
-		justify-content: end;
+		justify-content: flex-end;
 	}
 
 	.category_content {
