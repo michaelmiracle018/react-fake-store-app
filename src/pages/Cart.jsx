@@ -3,15 +3,14 @@ import CartItem from "../components/UI/CartItem";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import "../styles/cart.css";
-import emptyCartImage from '../assets/images/icon-empty.png';
+import emptyCartImage from "../assets/images/icon-empty.png";
 import { clearCart } from "../features/products/productSlice";
 import { openModal } from "../features/modal/modalSlice";
-
-
+import Helmet from "../components/Helmet/Helmet";
 
 const Cart = () => {
 	const { cartBag, totalCartPrice } = useSelector((store) => store.products);
-	const dispatch = useDispatch()
+	const dispatch = useDispatch();
 
 	if (cartBag.length < 1) {
 		return (
@@ -30,36 +29,38 @@ const Cart = () => {
 	}
 
 	return (
-		<div className="container my-4">
-			<section>
-				{cartBag.map((cart) => {
-					return <CartItem key={cart.id} {...cart} />;
-				})}
-			</section>
+		<Helmet title="Cart Page">
+			<div className="container my-4">
+				<section>
+					{cartBag.map((cart) => {
+						return <CartItem key={cart.id} {...cart} />;
+					})}
+				</section>
 
-			<div className="footer">
-				<hr />
-				<div className="total_cart">
-					<h2>Total</h2>
-					<h2>$ {totalCartPrice.toFixed(2)}</h2>
-				</div>
-				<div className="action_btn">
-					<div>
-						<button
-							className=" clear_btn"
-							onClick={() => dispatch(openModal())}
-						>
-							Clear Cart
-						</button>
+				<div className="footer">
+					<hr />
+					<div className="total_cart">
+						<h2>Total</h2>
+						<h2>$ {totalCartPrice.toFixed(2)}</h2>
 					</div>
-					<div>
-						<Link to="/order">
-							<button className=" clear_btn">Check Order</button>
-						</Link>
+					<div className="action_btn">
+						<div>
+							<button
+								className=" clear_btn"
+								onClick={() => dispatch(openModal())}
+							>
+								Clear Cart
+							</button>
+						</div>
+						<div>
+							<Link to="/order">
+								<button className=" clear_btn">Check Order</button>
+							</Link>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</Helmet>
 	);
 };
 
